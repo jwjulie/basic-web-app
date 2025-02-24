@@ -18,6 +18,16 @@ describe("QueryProcessor", () => {
           ));
     });
 
+    test('should return andrew id description', () => {
+        const query = "andrew id";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Your Andrew userID (AndrewID) is the username for your Andrew Account. " +
+            "Your Andrew userID is required for all Web Login services including email, " +
+            "network access (to campus wired and wireless networks), public computer labs and more."
+          ));
+    });
+
     test('should return name', () => {
         const query = "What is your name?";
         const response: string = QueryProcessor(query);
