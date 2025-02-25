@@ -27,7 +27,6 @@ export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("plus")) {
     const match = query.match(/\d+/g);
     if (match) {
-      const numbers = match.map(Number);
       const sum = match.map(Number).reduce((acc, num) => acc + num, 0);
       return sum.toString();
     }
