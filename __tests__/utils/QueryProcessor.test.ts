@@ -22,9 +22,7 @@ describe("QueryProcessor", () => {
         const query = "andrew id";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
-            "Your Andrew userID (AndrewID) is the username for your Andrew Account. " +
-            "Your Andrew userID is required for all Web Login services including email, " +
-            "network access (to campus wired and wireless networks), public computer labs and more."
+            "juliewu"
           ));
     });
 

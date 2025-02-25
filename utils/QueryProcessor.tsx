@@ -8,15 +8,11 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("andrew id")) {
-    return (
-      "Your Andrew userID (AndrewID) is the username for your Andrew Account. " +
-      "Your Andrew userID is required for all Web Login services including email, " +
-      "network access (to campus wired and wireless networks), public computer labs and more."
-    );
+    return "juliewu";
   }
 
   if (query.toLowerCase().includes("name")) {
-    return "Rohan";
+    return "julie";
   }
 
   return "";
