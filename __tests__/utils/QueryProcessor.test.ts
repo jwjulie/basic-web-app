@@ -58,5 +58,13 @@ describe("QueryProcessor", () => {
           ));
     })
 
+    test('should return 10', () => {
+        const query = "multiplied 2 3?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "6"
+          ));
+    })
+
     
 });

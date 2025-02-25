@@ -32,5 +32,13 @@ export default function QueryProcessor(query: string): string {
     }
   }
 
+  if (query.toLowerCase().includes("multiplied")) {
+    const match = query.match(/\d+/g);
+    if (match) {
+      const prod = match.map(Number).reduce((acc, num) => acc * num, 1);
+      return prod.toString();
+    }
+  }
+
   return "";
 }
