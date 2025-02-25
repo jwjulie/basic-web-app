@@ -15,12 +15,21 @@ export default function QueryProcessor(query: string): string {
     return "julie";
   }
 
-  if (query.toLowerCase().includes("which of the following numbers is the largest")) {
+  if (query.toLowerCase().includes("numbers is the largest")) {
     const match = query.match(/\d+/g);
     if (match) {
       const numbers = match.map(Number);
       const largest = Math.max(...numbers);
       return largest.toString();
+    }
+  }
+
+  if (query.toLowerCase().includes("plus")) {
+    const match = query.match(/\d+/g);
+    if (match) {
+      const numbers = match.map(Number);
+      const sum = match.map(Number).reduce((acc, num) => acc + num, 0);
+      return sum.toString();
     }
   }
 

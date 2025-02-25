@@ -42,5 +42,21 @@ describe("QueryProcessor", () => {
           ));
     })
 
+    test('should return 22', () => {
+        const query = "Which of the following numbers is the largest: 22, 2, 18?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "22"
+          ));
+    })
+
+    test('should return 5', () => {
+        const query = "plus 2 3?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "5"
+          ));
+    })
+
     
 });
