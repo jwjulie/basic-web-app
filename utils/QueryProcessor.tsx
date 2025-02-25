@@ -15,5 +15,14 @@ export default function QueryProcessor(query: string): string {
     return "julie";
   }
 
+  if (query.toLowerCase().includes("which of the following numbers is the largest")) {
+    const match = query.match(/\d+/g);
+    if (match) {
+      const numbers = match.map(Number);
+      const largest = Math.max(...numbers);
+      return largest.toString();
+    }
+  }
+
   return "";
 }

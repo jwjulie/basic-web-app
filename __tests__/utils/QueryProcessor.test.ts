@@ -18,7 +18,7 @@ describe("QueryProcessor", () => {
           ));
     });
 
-    test('should return andrew id description', () => {
+    test('should return andrew id ', () => {
         const query = "andrew id";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
@@ -33,4 +33,14 @@ describe("QueryProcessor", () => {
             "julie"
           ));
     })
+
+    test('should return 78', () => {
+        const query = "Which of the following numbers is the largest: 25, 78, 22?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "78"
+          ));
+    })
+
+    
 });
